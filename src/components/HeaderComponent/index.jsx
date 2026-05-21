@@ -9,35 +9,34 @@ const HeaderComponent = () => {
 
   const onClickLogout = () => {
     Cookies.remove('jwt_token')
-
     navigate('/login')
   }
 
   return (
-    <nav className="navbar">
-      <Link to="/">
-        <img
-          src="https://cdn-icons-png.flaticon.com/512/2232/2232688.png"
-          alt="website logo"
-          className="website-logo"
-        />
+    <nav className="header-container">
+      <Link to="/" className="link-item">
+        <h1 className="logo-heading">BOOKHUB</h1>
       </Link>
 
-      <ul className="nav-links">
+      <ul className="nav-menu">
         <li>
-          <Link to="/" className="nav-link">
+          <Link to="/" className="link-item">
             Home
           </Link>
         </li>
 
         <li>
-          <Link to="/shelf" className="nav-link">
+          <Link to="/bookshelves" className="link-item">
             Bookshelves
           </Link>
         </li>
       </ul>
 
-      <button type="button" className="logout-btn" onClick={onClickLogout}>
+      <button
+        type="button"
+        className="logout-btn"
+        onClick={onClickLogout}
+      >
         Logout
       </button>
     </nav>
