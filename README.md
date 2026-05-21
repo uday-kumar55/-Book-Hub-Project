@@ -6,7 +6,7 @@ Implemented login authentication, protected routes, API integration, search func
 Tech Stack: React.js, JavaScript, JSX, CSS, React Router DOM, REST APIs
 
 Live Project:
-[https://uday3455.ccbp.tech](https://book-hub-project-five.vercel.app/login)
+https://book-hub-project-eight.vercel.app
 
 Demo Credentials:
 Username: rahul
