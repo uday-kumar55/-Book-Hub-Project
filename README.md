@@ -1,21 +1,13 @@
-<<<<<<< HEAD
-# React + Vite
+# Book Hub Project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Developed a Book Hub web application using React.js.
+Implemented login authentication, protected routes, API integration, search functionality, and dynamic routing. Users can browse books, search books, and view detailed information about each book.
 
-Currently, two official plugins are available:
+Tech Stack: React.js, JavaScript, JSX, CSS, React Router DOM, REST APIs
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Live Project:
+https://uday3455.ccbp.tech
 
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-=======
-# -Book-Hub-Project
-A responsive Book Hub web application built using React.js with authentication, protected routes, API integration, search functionality, and dynamic book details pages.
->>>>>>> 9e63571be73458a803c139499dbb5aa4a32e9576
+Demo Credentials:
+Username: rahul
+Password: rahul@2021
