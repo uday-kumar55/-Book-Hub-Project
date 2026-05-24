@@ -60,8 +60,8 @@ const LoginPage = () => {
   }
 
   const onClickAutoFill = () => {
-    setUsername('rahul')
-    setPassword('rahul@2021')
+    setUsername('saira')
+    setPassword('princess@9')
   }
 
   return (
@@ -128,11 +128,11 @@ const LoginPage = () => {
 
           <div className="credentials-box">
             <p>
-              Username: <span>rahul</span>
+              Username: <span>saira</span>
             </p>
 
             <p>
-              Password: <span>rahul@2021</span>
+              Password: <span>princess@9</span>
             </p>
           </div>
         </div>
