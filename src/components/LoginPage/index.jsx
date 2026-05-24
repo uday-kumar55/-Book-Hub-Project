@@ -7,26 +7,30 @@ import Cookies from 'js-cookie'
 import './index.css'
 
 const LoginPage = () => {
-  const jwtToken = Cookies.get('jwt_token')
+  const [username, setUsername] = useState('')
+  const [password, setPassword] = useState('')
+  const [errorMsg, setErrorMsg] = useState('')
+  const [showError, setShowError] = useState(false)
 
   const navigate = useNavigate()
 
-  const [username, setUsername] = useState('')
+  const jwtToken = Cookies.get('jwt_token')
 
-  const [password, setPassword] = useState('')
-
-  const [errorMsg, setErrorMsg] = useState('')
+  if (jwtToken !== undefined) {
+    return <Navigate to="/" />
+  }
 
   const onSubmitSuccess = jwtTokenValue => {
     Cookies.set('jwt_token', jwtTokenValue, {
       expires: 30,
     })
 
-    navigate('/', {replace: true})
+    navigate('/')
   }
 
-  const onSubmitFailure = errorMessage => {
-    setErrorMsg(errorMessage)
+  const onSubmitFailure = error => {
+    setShowError(true)
+    setErrorMsg(error)
   }
 
   const submitForm = async event => {
@@ -55,12 +59,13 @@ const LoginPage = () => {
     }
   }
 
-  if (jwtToken !== undefined) {
-    return <Navigate to="/" />
+  const onClickAutoFill = () => {
+    setUsername('rahul')
+    setPassword('rahul@2021')
   }
 
   return (
-    <div className="login-container">
+    <div className="login-bg-container">
       <img
         src="https://assets.ccbp.in/frontend/react-js/nxt-trendz-login-img.png"
         alt="website login"
@@ -69,38 +74,68 @@ const LoginPage = () => {
 
       <form className="login-card" onSubmit={submitForm}>
         <img
-          src="https://img.freepik.com/free-vector/mobile-login-concept-illustration_114360-83.jpg"
+          src="https://cdn-icons-png.flaticon.com/512/2232/2232688.png"
           alt="login website logo"
-          className="website-logo"
+          className="login-logo"
         />
 
-        <div className="input-container">
-          <label htmlFor="username">Username*</label>
+        <label className="input-label" htmlFor="username">
+          USERNAME
+        </label>
 
-          <input
-            id="username"
-            type="text"
-            value={username}
-            onChange={event => setUsername(event.target.value)}
-          />
-        </div>
+        <input
+          type="text"
+          id="username"
+          className="input-field"
+          placeholder="Enter username"
+          value={username}
+          onChange={event => setUsername(event.target.value)}
+        />
 
-        <div className="input-container">
-          <label htmlFor="password">Password*</label>
+        <label className="input-label" htmlFor="password">
+          PASSWORD
+        </label>
 
-          <input
-            id="password"
-            type="password"
-            value={password}
-            onChange={event => setPassword(event.target.value)}
-          />
-        </div>
+        <input
+          type="password"
+          id="password"
+          className="input-field"
+          placeholder="Enter password"
+          value={password}
+          onChange={event => setPassword(event.target.value)}
+        />
 
         <button type="submit" className="login-btn">
           Login
         </button>
 
-        {errorMsg !== '' && <p className="error-msg">{errorMsg}</p>}
+        {showError && <p className="error-msg">*{errorMsg}</p>}
+
+        <hr className="line" />
+
+        <div className="demo-credentials-container">
+          <div className="demo-header">
+            <p className="demo-text">Demo Credentials:</p>
+
+            <button
+              type="button"
+              className="auto-fill-btn"
+              onClick={onClickAutoFill}
+            >
+              Auto-fill values
+            </button>
+          </div>
+
+          <div className="credentials-box">
+            <p>
+              Username: <span>rahul</span>
+            </p>
+
+            <p>
+              Password: <span>rahul@2021</span>
+            </p>
+          </div>
+        </div>
       </form>
     </div>
   )
