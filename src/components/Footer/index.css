@@ -1,0 +1,46 @@
+.footer-section {
+  margin-top: auto;
+  padding: 48px 24px;
+  color: #ffffff;
+  background: linear-gradient(135deg, #0f172a, #1e293b 62%, #7c2d12);
+  text-align: center;
+}
+
+.footer-brand {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+}
+
+.footer-logo {
+  width: 54px;
+  height: 54px;
+  object-fit: contain;
+}
+
+.footer-title {
+  margin: 0;
+  color: #ffffff;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 28px;
+  font-style: italic;
+}
+
+.footer-tagline {
+  margin: 18px 0 24px;
+  color: #e2e8f0;
+  font-size: 18px;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 22px;
+}
+
+.social-icon {
+  width: 28px;
+  height: 28px;
+  color: #ffffff;
+}

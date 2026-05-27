@@ -1,0 +1,272 @@
+.restaurant-details-main {
+  flex: 1;
+  background-color: #ffffff;
+}
+
+.restaurant-banner {
+  min-height: 344px;
+  display: flex;
+  align-items: center;
+  gap: 34px;
+  padding: 42px max(32px, calc((100vw - 1140px) / 2 + 32px));
+  color: #ffffff;
+  background:
+    radial-gradient(circle at 96% 18%, rgba(255, 255, 255, 0.18), transparent 22%),
+    linear-gradient(135deg, #1f2937, #0f172a 55%, #7c2d12);
+}
+
+.details-restaurant-image {
+  width: 445px;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 18px;
+  box-shadow: 0 26px 50px rgba(0, 0, 0, 0.28);
+}
+
+.restaurant-banner-content {
+  max-width: 560px;
+}
+
+.details-restaurant-name {
+  margin: 0 0 12px;
+  color: #ffffff;
+  font-size: 38px;
+  line-height: 1.2;
+}
+
+.details-cuisine,
+.details-location {
+  margin-bottom: 10px;
+  color: #e2e8f0;
+  font-size: 18px;
+}
+
+.restaurant-meta-row {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-top: 22px;
+}
+
+.meta-block {
+  min-width: 120px;
+}
+
+.meta-heading {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.details-star {
+  color: #ffffff;
+}
+
+.meta-caption {
+  margin-top: 6px;
+  color: #cbd5e1;
+  font-size: 14px;
+}
+
+.meta-separator {
+  width: 1px;
+  height: 42px;
+  background-color: rgba(255, 255, 255, 0.45);
+}
+
+.food-items-list {
+  width: min(100%, 1140px);
+  margin: 0 auto;
+  padding: 22px 32px 78px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 34px 28px;
+  list-style-type: none;
+}
+
+.menu-heading-section {
+  width: min(100%, 1140px);
+  margin: 0 auto;
+  padding: 38px 32px 0;
+  text-align: left;
+}
+
+.menu-heading {
+  margin: 0 0 8px;
+  color: #183b56;
+  font-size: 28px;
+}
+
+.menu-description {
+  color: #64748b;
+}
+
+.food-item-card {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  min-width: 0;
+}
+
+.food-image {
+  width: 255px;
+  height: 170px;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+.food-details {
+  text-align: left;
+}
+
+.food-name {
+  margin: 0 0 10px;
+  color: #334155;
+  font-size: 20px;
+  line-height: 1.25;
+}
+
+.food-cost,
+.food-rating-row {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.food-cost {
+  margin-bottom: 8px;
+  color: #334155;
+  font-weight: 700;
+}
+
+.food-rating-row {
+  margin-bottom: 14px;
+  color: #1e293b;
+  font-weight: 700;
+}
+
+.add-food-btn {
+  min-width: 58px;
+  height: 32px;
+  color: #ffa412;
+  background-color: #ffffff;
+  border: 2px solid #ffa412;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 800;
+}
+
+.quantity-control {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.quantity-btn {
+  width: 28px;
+  height: 28px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #475569;
+  background-color: #ffffff;
+  border: 1px solid #475569;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.quantity-count {
+  min-width: 20px;
+  color: #475569;
+  font-weight: 800;
+  text-align: center;
+}
+
+.details-failure-card {
+  min-height: 520px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  color: #475569;
+  text-align: center;
+}
+
+.details-failure-card button {
+  padding: 10px 18px;
+  color: #ffffff;
+  background-color: #f7931e;
+  border: 0;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+@media screen and (max-width: 950px) {
+  .restaurant-banner {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .details-restaurant-image {
+    width: min(100%, 520px);
+  }
+
+  .food-items-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .restaurant-banner {
+    min-height: auto;
+    padding: 28px 20px;
+    gap: 22px;
+  }
+
+  .details-restaurant-image {
+    height: 230px;
+  }
+
+  .details-restaurant-name {
+    font-size: 28px;
+  }
+
+  .details-cuisine,
+  .details-location {
+    font-size: 16px;
+  }
+
+  .food-items-list {
+    padding: 20px 20px 56px;
+    gap: 28px;
+  }
+
+  .menu-heading-section {
+    padding: 30px 20px 0;
+  }
+
+  .food-item-card {
+    gap: 14px;
+  }
+
+  .food-image {
+    width: 150px;
+    height: 120px;
+  }
+
+  .food-name {
+    font-size: 17px;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .food-image {
+    width: 124px;
+    height: 108px;
+  }
+}
